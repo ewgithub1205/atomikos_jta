@@ -7,7 +7,7 @@ Using atomikos on Hibernate transaction and Hornetq transacted jmsMessageTemplat
  * xaDataSource and JtaTransaction Manager 
 
 	
-``	   @Bean(destroyMethod = "close",initMethod="init")
+```	   @Bean(destroyMethod = "close",initMethod="init")
 	    public DataSource myxaDataSource() throws AtomikosSQLException {
 			Properties xaProperties = new Properties();
 			xaProperties.put("user", user);
@@ -91,12 +91,12 @@ Using atomikos on Hibernate transaction and Hornetq transacted jmsMessageTemplat
 	    	return userTransactionManager;
 	    	
 	    }
-``
+```
  
     
 > * Horentq Jms xa connection factory
 	
-``		<bean id="xaConnectionFactory" class="xx.ConnectionFactoryBean"
+```		<bean id="xaConnectionFactory" class="xx.ConnectionFactoryBean"
 			init-method="init" destroy-method="close">
 			<!-- The unique resource name needed for recovery by the Atomikos core. -->
 			<property name="uniqueResourceName" value="XA_UNIQUE_NAME"/>
@@ -129,4 +129,4 @@ Using atomikos on Hibernate transaction and Hornetq transacted jmsMessageTemplat
 	        <property name="receiveTimeout" value="10000"/> 
 	    </bean>
 	
-``
+```
