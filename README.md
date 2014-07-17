@@ -4,7 +4,7 @@ atomikos_jta
 Using atomikos on Hibernate transaction and Hornetq transacted jmsMessageTemplate
 
 
-* xaDataSource and JtaTransaction Manager 
+> * xaDataSource and JtaTransaction Manager 
 
 	
    @Bean(destroyMethod = "close",initMethod="init")
@@ -94,7 +94,7 @@ Using atomikos on Hibernate transaction and Hornetq transacted jmsMessageTemplat
 
  
     
-* Horentq Jms xa connection factory
+> * Horentq Jms xa connection factory
 	
 	<bean id="xaConnectionFactory" class="xx.ConnectionFactoryBean"
 		init-method="init" destroy-method="close">
